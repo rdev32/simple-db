@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Manual</title>
+</head>
+<body>
+  <header>
+    <h1>SimpleDB Manual</h1>
+    <p><i>A basic database with core features</i></p>
+  </header>
+  <main>
+    <article>
+      <h2>Data types</h2><hr>
+      <section>
+        <h3>Number</h3>
+      </section>
+      <section>
+        <h3>Decimal</h3>
+      </section>
+      <section>
+        <h3>String</h3>
+      </section>
+      <section>
+        <h3>Boolean</h3>
+      </section>
+      <section>
+        <h3>Binary</h3>
+      </section>
+    </article>
+
+    <article>
+      <h2>Commands</h2><hr>
+      <section id="exporting-databases">
+        <h3>Exporting databases</h3>
+        <p>To export a database, use the following command:</p>
+        <pre><code class="language-bash">dbms export -d database_name -f export_file.sql</code></pre>
+      </section>
+      
+      <section id="loading-databases">
+        <h3>Loading databases</h3>
+        <p>To load a database from an export file, use the following command:</p>
+        <pre><code class="language-bash">dbms load -d database_name -f export_file.sql</code></pre>
+      </section>
+      
+      <section id="databases">
+        <h3>Databases</h3>
+      
+        <section id="create-database">
+          <h4>Create database</h4>
+          <pre><code class="language-bash">dbms create_database -d new_database</code></pre>
+        </section>
+      
+        <section id="update-database">
+          <h4>Update database</h4>
+          <pre><code class="language-bash">dbms update_database -d existing_database -n new_database_name</code></pre>
+        </section>
+      
+        <section id="read-database">
+          <h4>Read database</h4>
+          <pre><code class="language-bash">dbms read_database -d database_name</code></pre>
+        </section>
+      
+        <section id="delete-database">
+          <h4>Delete database</h4>
+          <pre><code class="language-bash">dbms delete_database -d database_name</code></pre>
+        </section>
+      </section>
+      
+      <section id="tables">
+        <h3>Tables</h3>
+      
+        <section id="create-table">
+          <h4>Create table</h4>
+          <pre><code class="language-bash">dbms create_table -d database_name -t new_table</code></pre>
+        </section>
+      
+        <section id="update-table">
+          <h4>Update table</h4>
+          <pre><code class="language-bash">dbms update_table -d database_name -t existing_table -n new_table_name</code></pre>
+        </section>
+      
+        <section id="read-table">
+          <h4>Read table</h4>
+          <pre><code class="language-bash">dbms read_table -d database_name -t table_name</code></pre>
+        </section>
+      
+        <section id="delete-table">
+          <h4>Delete table</h4>
+          <pre><code class="language-bash">dbms delete_table -d database_name -t table_name</code></pre>
+        </section>
+      </section>
+    </article>
+
+    <article>
+      <h2>Queries</h2><hr>
+      <section>
+
+      </section>
+    </article>
+
+    <article>
+      <h2>Backup & Restore</h2><hr>
+      <section>
+
+      </section>
+    </article>
+
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="https://github.com/rdev32/simple-db/">Licence</a></li>
+        <li>|</li>
+        <li><a href="https://github.com/rdev32/simple-db/issues">Support</a></li>
+        <li>|</li>
+        <li><a href="https://www.linkedin.com/in/rdev32/">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+<style>
+  html, body, :root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  header {
+    padding-left: 1rem;
+    background: linear-gradient(90deg, #fff 25%, #6d85da 70%);
+    border-bottom: 1rem solid #b9c4ed;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f1f1f1;
+  }
+
+  article {
+    border: 1pt solid black;
+    padding: 0 1rem;
+    background: #fff;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    color: white;
+    background: #5b73c8;
+    border-top: 1rem solid #b9c4ed;
+  }
+
+  footer nav {
+    display: flex;
+    width: 50%;
+  }
+
+  footer nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+  }
+</style>
+</html>
