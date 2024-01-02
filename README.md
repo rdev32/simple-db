@@ -60,6 +60,14 @@ dbms read_table -d database_name -t table_name
 dbms delete_table -d database_name -t table_name
 ```
 
+## Info
+The following explain the purpose of each file
+- `console.hpp` the client that process everything on the console from input to output
+- `query.hpp` transforms the SQL queries to operate in this database
+- `engine.hpp` manages data with operations like storing, serializing and proccessing
+- `task.hpp` balances processes and make sure all querys execute without any conflicts
+- `main.cpp` application startup
+
 ## Contribute
 We welcome contributions to enhance the functionality and usability of this DBMS. If you'd like to contribute, please follow our Contribution Guidelines.
 
